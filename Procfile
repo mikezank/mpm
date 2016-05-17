@@ -1,1 +1,1 @@
-worker: ruby r.worker.rb
+worker: ruby threader.rb
