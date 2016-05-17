@@ -1,1 +1,1 @@
-worker: ruby spawner.rb
+worker: ruby threader.rb
