@@ -6,6 +6,8 @@
 require 'rubygems'
 require 'ffi-rzmq'
 
+
+
 thread1 = Thread.new{
 
 context = ZMQ::Context.new
