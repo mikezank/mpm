@@ -22,6 +22,7 @@ end
 
 }
 
+
 thread2 = Thread.new{
   
   context = ZMQ::Context.new
