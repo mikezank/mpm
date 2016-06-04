@@ -8,7 +8,7 @@ require 'ffi-rzmq'
 
 context = ZMQ::Context.new
 socket = context.socket(ZMQ::REQ)
-socket.connect('tcp://localhost:5559')
+socket.connect('tcp://45.79.199.41:5559')
 
 10.times do |request|
   string = "Hello #{request}"
