@@ -27,7 +27,7 @@ requester = context.socket(ZMQ::REQ)
 requester.connect(addr)
 
 0.upto(9) do |request_nbr|
-  puts "Sending request #{request_nbr}…"
+  puts "Sending request #{request_nbr}..."
   error_check(requester.send_string("Hello"))
 
   reply = ''
