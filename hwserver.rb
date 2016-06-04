@@ -13,7 +13,7 @@ context = ZMQ::Context.new(1)
 puts "Starting Hello World server..."
 # socket to listen for clients
 socket = context.socket(ZMQ::REP)
-socket.bind("tcp://*:5560")
+socket.bind("tcp://localhost:5560")
 
 while true do
   # Wait for next request from client

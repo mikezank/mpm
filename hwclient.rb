@@ -14,11 +14,17 @@ def error_check(rc)
 end
 
 context = ZMQ::Context.new(1)
+if ARGV[0] == 'local'
+  puts "Running client in local mode"
+  addr = "tcp://localhost:5560"
+else
+  addr = "tcp://45.79.199.41:5560"
+end
 
 # Socket to talk to server
 puts "Connecting to hello world server…"
 requester = context.socket(ZMQ::REQ)
-requester.connect("tcp://45.79.199.41:5560")
+requester.connect(addr)
 
 0.upto(9) do |request_nbr|
   puts "Sending request #{request_nbr}…"
