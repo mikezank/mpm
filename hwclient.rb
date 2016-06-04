@@ -22,7 +22,7 @@ else
 end
 
 # Socket to talk to server
-puts "Connecting to hello world server…"
+puts "Connecting to hello world server..."
 requester = context.socket(ZMQ::REQ)
 requester.connect(addr)
 
