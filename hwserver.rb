@@ -24,6 +24,7 @@ puts "Starting Hello World server..."
 # socket to listen for clients
 socket = context.socket(ZMQ::REP)
 error_check(socket.bind("tcp://*:5560"))
+count = 0
 
 while true do
   # Wait for next request from client
@@ -36,6 +37,7 @@ while true do
   sleep 1
 
   # Send reply back to client
-  error_check(socket.send_string("world"))
+  count += 1
+  error_check(socket.send_string("world #{count}"))
 
 end
